@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="clickMe">click me</button>
+        <input type="text" v-on:keyup.enter="clickMe">
+        <button>add</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data : {
+
+            },
+            computed : {
+
+            },
+            components:{
+
+            },
+            methods : {
+                clickMe : function () {
+                    console.log('clicked');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

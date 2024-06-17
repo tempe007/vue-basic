@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <router-link to="/login">login</router-link>
+            <router-link to="/main">main</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script>
+    <script>
+        let LoginComponent = {
+            template : '<div>로그인</div>'
+        }
+        let MainComponent = {
+            template : '<div>메인</div>'
+        }
+        let loginRoute = {
+            //page url 이름
+            path : '/login',
+            component : LoginComponent
+        };
+        let mainRoute = {
+            path : '/main',
+            component : MainComponent
+        };
+
+        let router = new VueRouter({
+            //페이지의 라우팅 정보
+            mode : 'history',
+            routes :[
+                loginRoute,
+                mainRoute
+            ]
+        });
+        new Vue({
+           el:'#app',
+           router : router
+
+        });
+    </script>
+</body>
+</html>
