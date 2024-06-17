@@ -1,4 +1,4 @@
-# first_vue
+# vue-form
 
 ## Project setup
 ```
